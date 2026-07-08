@@ -1,9 +1,0 @@
-Placeholder note — no binary committed.
-
-The README references docs/screenshot.png. Add a real screenshot of the running
-app here (PNG) and delete this note. A good screenshot shows the cron input with
-a common expression (e.g. `0 9 * * 1-5`), the plain-English sentence beneath it,
-and the "Next 5 runs" list.
-
-To capture one: run `python3 -m http.server 8000` from the repo root, open
-http://localhost:8000, and take a screenshot of the page.

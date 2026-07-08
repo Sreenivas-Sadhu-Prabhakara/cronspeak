@@ -58,7 +58,7 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-Or use the hosted copy: `https://<user>.github.io/cronspeak/`
+Or use the hosted copy: <https://sreenivas-sadhu-prabhakara.github.io/cronspeak/>
 
 ## Running the tests
 
