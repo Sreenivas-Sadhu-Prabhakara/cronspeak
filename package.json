@@ -1,0 +1,30 @@
+{
+  "name": "cronspeak",
+  "version": "1.0.0",
+  "description": "Cron, in plain English. A zero-backend, offline-capable tool that translates cron expressions into clear sentences and previews the next runs.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "author": "Sreenivas Sadhu",
+  "homepage": "https://github.com/sreenivas/cronspeak",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sreenivas/cronspeak.git"
+  },
+  "keywords": [
+    "cron",
+    "crontab",
+    "cron-parser",
+    "scheduler",
+    "plain-english",
+    "offline",
+    "static-site",
+    "vanilla-js"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

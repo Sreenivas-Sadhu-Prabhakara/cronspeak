@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="cronspeak translates cron expressions into plain English and previews the next runs — entirely in your browser, with no network calls.">
+  <meta name="color-scheme" content="light dark">
+  <title>cronspeak — Cron, in plain English</title>
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23b9791b'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='20' font-weight='700' text-anchor='middle' fill='%23fffdf8'%3E*%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1>cronspeak<span class="dot">.</span></h1>
+      </div>
+      <p class="tagline">Cron, in plain English. Type an expression and read exactly when it runs.</p>
+      <p class="tz">Times shown in <span id="tz-label">your local timezone</span>.</p>
+    </header>
+
+    <main>
+      <!-- Input + anatomy (the signature element) -->
+      <section class="card" aria-labelledby="input-heading">
+        <label class="field-label" id="input-heading" for="cron">Cron expression</label>
+        <div class="input-row">
+          <input
+            id="cron"
+            name="cron"
+            type="text"
+            inputmode="text"
+            autocomplete="off"
+            autocapitalize="off"
+            autocorrect="off"
+            spellcheck="false"
+            aria-describedby="explanation"
+            value="0 9 * * 1-5"
+          >
+          <button type="button" class="icon-btn" id="copy-cron" aria-label="Copy cron expression to clipboard">Copy</button>
+        </div>
+
+        <div class="anatomy" id="anatomy" aria-hidden="true">
+          <div class="cell"><span class="val" data-field="0">—</span><span class="name">min</span></div>
+          <div class="cell"><span class="val" data-field="1">—</span><span class="name">hour</span></div>
+          <div class="cell"><span class="val" data-field="2">—</span><span class="name">day</span></div>
+          <div class="cell"><span class="val" data-field="3">—</span><span class="name">month</span></div>
+          <div class="cell"><span class="val" data-field="4">—</span><span class="name">weekday</span></div>
+        </div>
+      </section>
+
+      <!-- Plain-English explanation -->
+      <section class="card explain-card" aria-labelledby="explain-heading">
+        <span class="card-label" id="explain-heading">In plain English</span>
+        <p id="explanation" role="status" aria-live="polite">&nbsp;</p>
+        <div class="explain-actions">
+          <button type="button" class="icon-btn" id="copy-explain" aria-label="Copy the plain-English explanation to clipboard">Copy explanation</button>
+        </div>
+      </section>
+
+      <!-- Presets: English -> cron -->
+      <section class="card" aria-labelledby="presets-heading">
+        <span class="card-label" id="presets-heading">Start from a common schedule</span>
+        <p class="sub">Pick one to fill the field, then tweak it.</p>
+        <div class="presets" id="presets" role="group" aria-label="Preset schedules"></div>
+      </section>
+
+      <!-- Next runs -->
+      <section class="card" aria-labelledby="runs-heading">
+        <span class="card-label" id="runs-heading">Next 5 runs</span>
+        <ul class="runs" id="runs" aria-live="polite">
+          <li>Enter a valid expression to preview upcoming runs.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <span class="privacy-note">
+        <span class="lock" aria-hidden="true">&#9679;</span>
+        Runs entirely in your browser. No data leaves this page.
+      </span>
+      <a href="PRIVACY.md">Privacy</a>
+      <a href="https://github.com/sreenivas/cronspeak">Source</a>
+    </footer>
+  </div>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
