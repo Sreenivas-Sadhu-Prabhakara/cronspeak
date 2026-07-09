@@ -93,6 +93,14 @@ Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Please als
 read the [Code of Conduct](CODE_OF_CONDUCT.md). Security reports go through
 [SECURITY.md](SECURITY.md).
 
+## Disclaimer
+
+cronspeak is provided under the MIT License, "as is" and without warranty of any
+kind. It is a convenience tool for reading and writing cron expressions — always
+verify a generated schedule against your own system's cron implementation before
+relying on it in production. The authors accept no liability for any missed,
+duplicated, or mistimed jobs, or for any other loss or damage arising from its use.
+
 ## License
 
 MIT © 2026 Sreenivas Sadhu — see [LICENSE](LICENSE).
