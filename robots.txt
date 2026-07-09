@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
 
 Sitemap: https://sreenivas-sadhu-prabhakara.github.io/cronspeak/sitemap.xml

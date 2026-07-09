@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  /* Brand dark background (cronspeak --paper dark) */
+  body {
+    background: #12141c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* The favicon mark: amber rounded square with a three-spoke asterisk.
+     ~12% safe padding => mark is 76vmin square, centered. */
+  .mark {
+    width: 76vmin;
+    height: 76vmin;
+  }
+  .mark svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+  <div class="mark">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <rect width="512" height="512" rx="112" fill="#b9791b"/>
+      <g fill="#fffdf8">
+        <rect x="234" y="120" width="44" height="272" rx="22"/>
+        <rect x="234" y="120" width="44" height="272" rx="22" transform="rotate(60 256 256)"/>
+        <rect x="234" y="120" width="44" height="272" rx="22" transform="rotate(120 256 256)"/>
+      </g>
+    </svg>
+  </div>
+</body>
+</html>
